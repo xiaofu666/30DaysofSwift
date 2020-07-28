@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,9 +23,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ndr-f5-3j7">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ndr-f5-3j7">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNJ-oa-aY1">
+                    <rect key="frame" x="162.5" y="587" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="WMK-zY-8p3"/>
+                        <constraint firstAttribute="height" constant="50" id="m2O-Rl-fEM"/>
+                    </constraints>
+                    <state key="normal" title="开始"/>
+                    <connections>
+                        <action selector="startCamera:" destination="-1" eventType="touchUpInside" id="nay-cy-nhr"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="Ndr-f5-3j7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3ux-d5-nXf"/>
@@ -45,6 +54,8 @@
                 <constraint firstItem="Cfb-N9-Av1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eeX-x0-8CJ"/>
                 <constraint firstAttribute="bottom" secondItem="Ndr-f5-3j7" secondAttribute="bottom" id="fig-Oe-bq7"/>
                 <constraint firstItem="Cfb-N9-Av1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fwx-4l-sUj"/>
+                <constraint firstItem="uNJ-oa-aY1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jCp-Y2-jfn"/>
+                <constraint firstAttribute="bottomMargin" secondItem="uNJ-oa-aY1" secondAttribute="bottom" constant="30" id="jML-hf-4SU"/>
                 <constraint firstItem="Cfb-N9-Av1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qig-2A-Dgk"/>
                 <constraint firstAttribute="trailing" secondItem="Cfb-N9-Av1" secondAttribute="trailing" constant="360" id="qk0-vv-f0C"/>
                 <constraint firstAttribute="trailing" secondItem="Ndr-f5-3j7" secondAttribute="trailing" id="sMu-sb-5F8"/>
@@ -67,6 +78,7 @@
                     <exclude reference="xj8-eh-HIv"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="138" y="153"/>
         </view>
     </objects>
 </document>

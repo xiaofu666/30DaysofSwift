@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var counter: Float = 0.0 {
         // 属性观察器
         didSet {
-            timeLabel.text = String(format: "%.1f", counter)
+            timeLabel.text = String(format: "%.2f", counter)
         }
     }
     // 给予timer一个默认值，这样timer就不会为Optional,
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         // timeLabel.text = String(counter)
         
         // 改成使用属性观察器监控和响应属性值的变化
-        counter = 0.0
+        counter = 0.00
     }
     
     @IBAction func resetButtonDidTouch(_ sender: UIButton) {
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         }
         timer = nil
         isPlaying = false
-        counter = 0
+        counter = 0.00
         playBtn.isEnabled = true
         pauseBtn.isEnabled = true
     }
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         // 调用实例的方法时建议用self.UpdateTimer,
         // 不建议使用ViewController.UpdateTimer
         // 因为若方法定义成了类方法，第二种方式编译器不会报错。
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target:self, selector: #selector(self.UpdateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target:self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
         isPlaying = true
     }
     
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     }
     
    @objc func UpdateTimer() {
-        counter = counter + 0.1
+        counter = counter + 0.01
     }
     
     

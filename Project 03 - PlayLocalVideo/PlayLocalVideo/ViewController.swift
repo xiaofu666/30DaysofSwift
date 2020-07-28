@@ -85,30 +85,30 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     // Extensions must not contain stored properties
     //var a = 1
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 220
+        return 220
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-    return 2
+        return 2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return data.count
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-    // 知识点：向下转型
-    // as! 强制类型转换，无法转换时会抛出运行时异常
-    // as？可选类型转换，无法转换时返回nil
-    let cell = videoTableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
-    let video = data[indexPath.row]
+        // 知识点：向下转型
+        // as! 强制类型转换，无法转换时会抛出运行时异常
+        // as？可选类型转换，无法转换时返回nil
+        let cell = videoTableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
+        let video = data[indexPath.row]
 
-    cell.videoScreenshot.image = UIImage(named: video.image)
-    cell.videoTitleLabel.text = video.title
-    cell.videoSourceLabel.text = video.source
+        cell.videoScreenshot.image = UIImage(named: video.image)
+        cell.videoTitleLabel.text = video.title
+        cell.videoSourceLabel.text = video.source
 
-    return cell
+        return cell
 
     }
 }

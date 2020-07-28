@@ -109,15 +109,14 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     
-    var didTakePhoto = Bool()
+    var didTakePhoto : Bool = true
     
     func didPressTakeAnother(){
         if didTakePhoto == true{
             tempImageView.isHidden = true
             didTakePhoto = false
             
-        }
-        else{
+        } else {
             captureSession?.startRunning()
             didTakePhoto = true
             didPressTakePhoto()
@@ -126,9 +125,10 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @IBAction func startCamera(_ sender: UIButton) {
         didPressTakeAnother()
     }
+    
     
     override var prefersStatusBarHidden: Bool {
         return true

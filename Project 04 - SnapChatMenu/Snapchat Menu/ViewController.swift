@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let centerView: CameraView = CameraView(nibName: "CameraView", bundle: nil)
         let rightView: RightView = RightView(nibName: "RightView", bundle: nil)
         
-        leftView.view.frame = CGRect(x: 0, y: 0, width: screenWidth-200, height: screenHeight)
+        leftView.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         centerView.view.frame = CGRect(x: screenWidth, y: 0, width: screenWidth, height: screenHeight)
         rightView.view.frame = CGRect(x: 2*screenWidth, y: 0, width: screenWidth, height: screenHeight)
  

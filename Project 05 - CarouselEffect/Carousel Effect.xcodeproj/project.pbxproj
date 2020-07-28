@@ -102,7 +102,7 @@
 				TargetAttributes = {
 					9FB2635E1C4401DD00D40D9B = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = F3YT8BWBYJ;
+						DevelopmentTeam = YZBRFWH5TP;
 						LastSwiftMigration = 0920;
 					};
 				};
@@ -112,6 +112,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -274,13 +275,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F3YT8BWBYJ;
+				DEVELOPMENT_TEAM = YZBRFWH5TP;
 				INFOPLIST_FILE = "Carousel Effect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Carousel-Effect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -288,13 +289,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F3YT8BWBYJ;
+				DEVELOPMENT_TEAM = YZBRFWH5TP;
 				INFOPLIST_FILE = "Carousel Effect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Carousel-Effect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

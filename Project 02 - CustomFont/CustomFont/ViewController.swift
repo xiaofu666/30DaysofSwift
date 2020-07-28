@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    static let identifier = "FontCell"
+    let identifier = "FontCell"
     
     var data = ["30 Days Swift", "这些字体特别适合打「奋斗」和「理想」",
                 "谢谢「造字工房」，本案例不涉及商业使用", "使用到造字工房劲黑体，致黑体，童心体",
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var changeFontLabel: UILabel!
     @IBOutlet weak var fontTableView: UITableView!
     
-    func changeFontDidTouch(_ sender: AnyObject) {
+    @objc func changeFontDidTouch(_ sender: AnyObject) {
         
         fontRowIndex = (fontRowIndex + 1) % 5
         print(fontNames[fontRowIndex])
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = fontTableView.dequeueReusableCell(withIdentifier: ViewController.identifier)
-        let cell = fontTableView.dequeueReusableCell(withIdentifier: ViewController.identifier, for: indexPath)
+        let cell = fontTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         let text = data[indexPath.row]
         
         cell.textLabel?.text = text
